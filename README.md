@@ -60,8 +60,8 @@ The included model was evaluated on a 20% test split of the UCI SMS Spam Collect
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/SaabaMire/hami_mini_market.git
-cd hami_mini_market
+git clone https://github.com/SaabaMire/spam_email_classification.git
+cd spam_email_classification
 ```
 
 ### 2. Create a virtual environment
