@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Machine-learning spam email and message classification." />
+    <title>Spam Email Classification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Spam Email Classification home">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4.5 5v5.5c0 5 3.2 9.6 7.5 11.5 4.3-1.9 7.5-6.5 7.5-11.5V5L12 2Zm3.3 7.2-4 4-2.1-2.1 1.2-1.2.9.9 2.8-2.8 1.2 1.2Z"/></svg>
+        </span>
+        <span>Spam<span>Classifier</span></span>
+      </a>
+      <div class="status-pill"><span></span> Model online</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">AI-powered message protection</div>
+          <h1>Keep suspicious messages out of your inbox.</h1>
+          <p class="hero-text">Analyze an email or SMS in seconds. The classifier uses a trained machine-learning model to identify spam patterns and help you communicate safely.</p>
+          <div class="model-facts" aria-label="Model information">
+            <div><strong>96%+</strong><span>Test accuracy</span></div>
+            <div><strong>5.5K</strong><span>Training messages</span></div>
+            <div><strong>Instant</strong><span>Classification</span></div>
+          </div>
+        </div>
+
+        <div class="analyzer-card">
+          <div class="card-heading">
+            <div>
+              <span class="step-label">Message analyzer</span>
+              <h2>Check a message</h2>
+            </div>
+            <span class="lock-icon" aria-label="Private analysis">
+              <svg viewBox="0 0 24 24"><path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 0 1 4 0v2h-4V6Zm3 10.7V18h-2v-1.3a2 2 0 1 1 2 0Z"/></svg>
+            </span>
+          </div>
+
+          <form id="prediction-form">
+            <label for="message">Paste your email or SMS</label>
+            <div class="textarea-wrap">
+              <textarea id="message" name="message" maxlength="5000" placeholder="Example: Congratulations! You have won a free prize. Click the link to claim it now..." required></textarea>
+              <span id="character-count">0 / 5,000</span>
+            </div>
+            <div class="examples">
+              <span>Try an example:</span>
+              <button type="button" data-example="spam">Suspicious offer</button>
+              <button type="button" data-example="ham">Normal message</button>
+            </div>
+            <button class="analyze-button" type="submit">
+              <span class="button-label">Analyze message</span>
+              <span class="spinner" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6 1.4-1.4L17.8 12l-7.4 7.4L9 18Z"/></svg>
+            </button>
+          </form>
+
+          <div id="error-message" class="error-message" role="alert"></div>
+
+          <section id="result" class="result" aria-live="polite">
+            <div class="result-top">
+              <div id="result-icon" class="result-icon"></div>
+              <div>
+                <span>Classification</span>
+                <h3 id="result-label"></h3>
+              </div>
+              <strong id="confidence"></strong>
+            </div>
+            <div class="probability-row">
+              <div><span>Spam probability</span><strong id="spam-value"></strong></div>
+              <div class="meter"><span id="spam-meter"></span></div>
+            </div>
+            <p id="result-guidance"></p>
+          </section>
+        </div>
+      </section>
+
+      <section class="how-it-works">
+        <div class="section-heading">
+          <span>Simple by design</span>
+          <h2>Protection in three quick steps</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-number">01</span>
+            <h3>Paste the message</h3>
+            <p>Enter the content of any email or SMS you want to check.</p>
+          </article>
+          <article>
+            <span class="feature-number">02</span>
+            <h3>AI analyzes patterns</h3>
+            <p>TF-IDF features and Logistic Regression evaluate the language.</p>
+          </article>
+          <article>
+            <span class="feature-number">03</span>
+            <h3>Review the result</h3>
+            <p>See the classification, confidence, and spam probability instantly.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built by <a href="https://github.com/SaabaMire" target="_blank" rel="noreferrer">SaabaMire</a> · HamiSkills Machine Learning Track</p>
+      <p>This tool supports screening decisions and may occasionally make mistakes.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
