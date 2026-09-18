@@ -158,8 +158,6 @@ Example response:
    https://saabamire.github.io/spam_email_classification/
    ```
 
-GitHub Pages is the recommended deployment for this project because it is free and the exported model runs entirely in JavaScript. The Flask version remains available for local use or optional server deployment.
-
 ## Disclaimer
 
 This application is an educational machine-learning project. Automated classifiers can make mistakes, so suspicious messages should still be reviewed carefully.
